@@ -1,9 +1,16 @@
 {
-	"ensure_newline_at_eof_on_save": true,
-	"font_size": 16,
-	"ignored_packages":
-	[
-		"Vintage"
-	],
-	"theme": "Adaptive.sublime-theme"
+  "ignored_packages":
+  [
+    "Vintage"
+  ],
+  "ignored_words":
+  [
+    "Fishbein"
+  ],
+  "spell_check": true,
+  "tab_size": 2,
+  "translate_tabs_to_spaces": true,
+  "theme": "Adaptive.sublime-theme",
+  "font_size": 12,
+  "ensure_newline_at_eof_on_save": true,
 }
