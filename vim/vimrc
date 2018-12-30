@@ -34,6 +34,8 @@ imap <C-s> <esc>:w<cr>
 
 " Ctrl+p for fzf
 nmap <C-p> :Files<cr>
+nmap <leader>b :Buffers<cr>
+
 set number                      " Display line numbers
 set history=1000                " Remember last 1000 commands
 
