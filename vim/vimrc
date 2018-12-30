@@ -60,3 +60,6 @@ nmap <leader>s :new <C-r>=escape(expand("%:p:h"), ' ') . '/'<cr>
 " Move up and down by visible lines if current line is wrapped
 nmap j gj
 nmap k gk
+
+" Copy the entire buffer into the system register
+nmap <leader>co ggVG*y
