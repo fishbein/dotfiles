@@ -9,7 +9,7 @@ export ZSH=/Users/phil/.oh-my-zsh
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="agnoster"
 
-alias zshrc="subl ~/.zshrc"
+alias zshrc="vim ~/.zshrc"
 alias be="bundle exec"
 alias bi="bundle install"
 alias gc="git commit"
@@ -19,17 +19,11 @@ alias gpull="git pull"
 alias gpush="git push"
 alias gbranch="git checkout -b"
 alias gclone="git clone"
-alias s="subl ."
 alias o="open ."
 alias rs="rails server"
 alias rc="rails console"
 
-# Preferred editor for local and remote sessions
-if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='vim'
-else
-  export EDITOR='subl'
-fi
+export EDITOR='vim'
 
 function up() {
   export git_dir="$(git rev-parse --show-toplevel 2> /dev/null)"
@@ -41,13 +35,15 @@ function up() {
   fi
 }
 
-
-
 source $ZSH/oh-my-zsh.sh
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
 
 prompt_context() {}
 
  . /usr/local/etc/profile.d/z.sh
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
