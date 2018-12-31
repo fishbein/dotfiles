@@ -16,8 +16,12 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-commentary'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+Plug 'altercation/vim-colors-solarized'
 " Initialize plugin system
 call plug#end()
+
+set background=dark
+colorscheme solarized
 
 "Set up tab preferences
 set tabstop=2
