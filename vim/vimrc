@@ -41,6 +41,9 @@ nmap <C-p> :Files<cr>
 nmap <leader>b :Buffers<cr>
 
 set number                      " Display line numbers
+set cursorline                  " Highlight current line
+hi cursorline cterm=none        " Remove underline from current line
+hi cursorlinenr ctermfg=red     " Make line number red
 set history=1000                " Remember last 1000 commands
 
 "In insert mode change cursor to line in iTerm 2 on macOS
