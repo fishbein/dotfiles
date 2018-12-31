@@ -76,3 +76,6 @@ nmap k gk
 
 " Copy the entire buffer into the system register
 nmap <leader>co ggVG*y
+
+" Bind `q` to close the buffer for help files
+autocmd Filetype help nnoremap <buffer> q :q<CR>
