@@ -1,2 +1,5 @@
-# dotfiles
-Because I'm tired of re-making these all the time
+# Phil Fishbein's Dotfiles
+
+## Setup
+NOTE: This will delete any existing vimrc and zshrc files.
+`rake setup`
