@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/phil/.oh-my-zsh
+export ZSH=/Users/phil.fishbein/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -10,8 +10,10 @@ export ZSH=/Users/phil/.oh-my-zsh
 ZSH_THEME="agnoster"
 
 alias zshrc="vim ~/.zshrc"
+alias szshrc="source ~/.zshrc"
 alias be="bundle exec"
 alias bi="bundle install"
+alias gs="git status"
 alias gc="git commit"
 alias gco="git checkout"
 alias gcm="git checkout master"
@@ -22,6 +24,8 @@ alias gclone="git clone"
 alias o="open ."
 alias rs="rails server"
 alias rc="rails console"
+alias cat="bat"
+alias replicaserver='DISABLE_MIGRATION_ERROR=true DATABASE_URL=`heroku config:get DATABASE_URL -a vts-production-replica` rails s'
 
 export EDITOR='vim'
 
