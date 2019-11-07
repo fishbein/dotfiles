@@ -7,7 +7,8 @@ export ZSH=/Users/phil.fishbein/.oh-my-zsh
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="agnoster"
+# ZSH_THEME="agnoster"
+ZSH_THEME="avit"
 
 alias zshrc="vim ~/.zshrc"
 alias szshrc="source ~/.zshrc"
@@ -25,7 +26,8 @@ alias o="open ."
 alias rs="rails server"
 alias rc="rails console"
 alias cat="bat"
-alias replicaserver='DISABLE_MIGRATION_ERROR=true DATABASE_URL=`heroku config:get DATABASE_URL -a vts-production-replica` rails s'
+alias replicaserver='DATABASE_URL=`heroku config:get DATABASE_URL -a vts-production-replica` spring rails s'
+alias replicaconsole='DATABASE_URL=`heroku config:get DATABASE_URL -a vts-production-replica` rails c'
 
 export EDITOR='vim'
 
@@ -41,13 +43,9 @@ function up() {
 
 source $ZSH/oh-my-zsh.sh
 
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-
 prompt_context() {}
 
  . /usr/local/etc/profile.d/z.sh
 
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
-
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+eval "$(rbenv init -)"
